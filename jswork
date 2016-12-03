@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>啊哈磊算法一</title>
+</head>
+<body>
+<script>
+    /*
+    * 153是一个非常优美的数
+     153=1*1*1+5*5*5+3*3*3
+     你知道在三位整数（abc）中，满足abc=a*a*a+b*b*b+c*c*c这个条件的最大的整数是什么?
+    * */
+    for(var a=9;a>0;a--) {
+        for (var b=9;b>=0;b--) {
+            for (var c=9;c>=0;c--) {
+                cal(a, b, c);
+            }
+        }
+    }
+    function cal(a, b, c) {
+        var num = a * 100 + b * 10 + c;
+        var s = Math.pow(a, 3) + Math.pow(b, 3) + Math.pow(c, 3);
+        if(num===s) {
+            console.log(num);
+        }
+    }
+</script>
+</body>
+</html>
